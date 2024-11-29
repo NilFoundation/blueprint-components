@@ -1,7 +1,7 @@
 # Concepts # {#component_concepts}
 
 A ```circuit``` is defined by ```Blueprint``` and ```Blueprint assignment table``` (contains ```Blueprint public assignment table``` and ```Blueprint private assignment table```) instances.
-It consist of one or multiple components putted on these two.
+It consist of one or multiple components put on these two.
 While ```Blueprint``` holds information about the circuit itself, its gates, constraints and other fixed expressions, ```Blueprint assignment table``` contains public and private assignments needed by zk-SNARK system.
 
 ## Blueprint 
@@ -29,4 +29,4 @@ The process of adding a component is following:
 1. (Optional) Get ```component``` start row by calling ```allocate_rows```. If the ```component``` is used as part of other ```component``` logic, it's not necessary to call the function, because needed rows are allocated by the master ```component```.
 2. (Optional) Allocate public input on the ```Blueprint assignment table``` via ```Blueprint assignment table::allocate_public_input```.
 3. Set all the gates and constraints on the ```Blueprint``` by calling ```generate_circuit```. ```Allocated data``` is being modified in process of the function working.
-4. Set all the assignments on the ```Blueprint assignment table``` table by calling ```generate_assignments```.
+4. Set all the assignments on the ```Blueprint assignment table``` by calling ```generate_assignments```.
